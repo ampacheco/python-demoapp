@@ -10,7 +10,7 @@ jobs:
       - name: Prune
         uses: vlaurin/action-ghcr-prune@main
         with:
-          token: ${{ secrets.YOUR_TOKEN }}
+          token: ${{ secrets.CR_PAT }}
           organization: ampacheco
           container: python-demoapp
           dry-run: true # Dry-run first, then change to `false`
