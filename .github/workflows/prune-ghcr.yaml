@@ -11,7 +11,6 @@ jobs:
         uses: vlaurin/action-ghcr-prune@main
         with:
           token: ${{ secrets.CR_PAT }}
-          # organization: ampacheco
-          container: ampacheco/python-demoapp
+          container: python-demoapp
           dry-run: true # Dry-run first, then change to `false`
           untagged: true
