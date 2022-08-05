@@ -1,0 +1,17 @@
+name: Prune GHCR
+on:
+  workflow_dispatch:
+  
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Prune
+        uses: vlaurin/action-ghcr-prune@main
+        with:
+          token: ${{ secrets.YOUR_TOKEN }}
+          organization: ampacheco
+          container: python-demoapp
+          dry-run: true # Dry-run first, then change to `false`
+          untagged: true
